@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <style>
+        .remove{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="" class="logo">
+            <ul id="sidemenu">
+                <li><a href="index.html">index</a></li>
+                <li><a href="java.html">java</a></li>
+                <li><a href="api.html">api</a></li>
+
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+<!-- Page content -->
+<div class="w3-content w3-padding-64 w3-margin-top" style="max-width:1564px">
+
+<h1>API</h1>
+
+<hr>
+<div>
+<h2>Click to change</h2>
+<p id="demo2">Hi</p>
+<div style="width: 0%;"><button class="asd" onclick="myFunction()">Click me</button></div>
+</div>
+
+<br><br><br><br>
+<hr>
+<div>
+<h1>Random cat Image</h1>
+<img id="catImage" src="" alt="Random Cat Image" width="300" height="200">
+<div style="width:0% ;">
+<button class="asd" onclick="changeRandomCatImage()">Change Cat</button>
+</div>
+</div>
+<br><br><br>
+
+<h1>Random  Image</h1>
+<div>
+<img id="tigerImage" src="" alt="Random Tiger Image" width="300" height="200">
+   <div style="width: 0%;"> <button class="asd" onclick="changeRandomTigerImage()">Change </button></div>
+</div>
+<br><br><br>
+<h2>Nationalize API Demo</h2>
+<form style="width: 600px ;height: 300px; height: 300px" id="nameForm">
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" name="name" required>
+    <button class="asd" type="button" onclick="fetchNationality()">Submit</button>
+
+<br><br><br>
+
+    <div style="width: 600px ;height: 300px; height: 300px" >
+        <form 
+          method="POST" 
+          action="https://script.google.com/macros/s/AKfycbx6xGkMwWVoZVKyqroZoeVL656NiixUkru1DmTLUgkrfWDfMJEKWkvV78kvRP_GQF8H/exec"
+        >
+          <input name="Email" type="email" placeholder="Email" required>
+          <input name="Name" type="text" placeholder="Name" required>
+          <input name="Topic" type="text" placeholder="Topic" required>
+          <button class="asd" type="submit">Send</button>
+        </form>
+        </div>
+<br><br><br><br><br><br><br><br><br><br>
+    <div class="w3-center w3-padding-24">
+        <iframe style="width: 600px ;height: 300px; height: 300px"
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQb1fMf94UXWXziKjxUQjV9mIqucKWua4-83T6rR0EFKyV-FC2V3_GstwRwjN6tfvjJnKSdtk2qU7z0/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+        ></iframe>
+      </div>
+ 
+</form>
+<hr><br><br><br><br>
+<h2>Coinbase API Demo</h2>
+<div id="lastUpdateTime"></div>
+<div id="prices"></div>
+
+<br><br><br>
+<div>
+
+<!-- <iframe width="100%" height="400" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQQdHjGotjFIDZ0NfRvdUibFd9WnZyGTBWnyCZs8IP9WXwbqcO-yepAGxbL1GwrXs0ZZXHSGvxb_dTa/pubchart?oid=812684166&amp;format=interactive"></iframe> -->
+
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3831.382697355445!2d103.26839811084022!3d16.200753684433266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3122a6ae121c1c2f%3A0x626cae9fcd86bf3d!2z4Lih4Lir4Liy4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4Lij4Liy4LiK4Lig4Lix4LiP4Lih4Lir4Liy4Liq4Liy4Lij4LiE4Liy4Lih!5e0!3m2!1sth!2sth!4v1701934162002!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe>
+</div>
+<!-- End page content -->
+</div>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p><a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green"></a></p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<!-- <script>
+  //document.getElementById("demo").innerHTML = "Hello World";
+  function myFunction() {
+    fetch("https://catfact.ninja/fact")
+      .then(function(response){
+        return response.json()
+      })
+      .then(function(data){
+        let txt = "";
+          for (let x in data) {
+            txt += data[x] + " ";
+          document.getElementById("demo2").innerHTML = txt;
+          };
+      
+        return data;
+      })  
+      
+ 
+}
+</script> -->
+
+<script>
+        // Function to fetch a random cat image
+        async function getRandomCatImage() {
+            try {
+                // Fetch data from the Cat API
+                const response = await fetch('https://api.thecatapi.com/v1/images/search');
+                const data = await response.json();
+
+                // Get the image URL from the data
+                const imageUrl = data[0].url;
+
+                // Return the image URL
+                return imageUrl;
+            } catch (error) {
+                console.error('Error fetching cat image:', error);
+            }
+        }
+
+        // Function to change the cat image
+        async function changeRandomCatImage() {
+            // Get the image element by ID
+            const imgElement = document.getElementById('catImage');
+
+            // Get a random cat image URL
+            const randomCatImageUrl = await getRandomCatImage();
+
+            // Change the image source
+            imgElement.src = randomCatImageUrl;
+        }
+
+        // Call the function to change the cat image initially
+        changeRandomCatImage();
+</script>
+
+<script>
+    // Function to fetch a random tiger image
+    async function getRandomTigerImage() {
+        try {
+            const response = await fetch('https://picsum.photos/300/200?random&category=animals');
+            const imageUrl = response.url;
+            return imageUrl;
+        } catch (error) {
+            console.error('Error fetching tiger image:', error);
+        }
+    }
+
+    // Function to change the tiger image
+    async function changeRandomTigerImage() {
+        const imgElement = document.getElementById('tigerImage');
+        const randomTigerImageUrl = await getRandomTigerImage();
+        imgElement.src = randomTigerImageUrl;
+    }
+
+    // Call the function to change the tiger image initially
+    changeRandomTigerImage();
+</script>
+
+<script>
+  function fetchNationality() {
+      var name = document.getElementById('name').value;
+      if (name.trim() === "") {
+          alert("Please enter a name");
+          return;
+      }
+
+      fetch(`https://api.nationalize.io?name=${name}`)
+          .then(response => response.json())
+          .then(data => {
+              displayResult(data);
+          })
+          .catch(error => {
+              console.error('Error fetching data:', error);
+              alert('Error fetching data. Please try again.');
+          });
+  }
+
+  function displayResult(data) {
+      var resultDiv = document.getElementById('result');
+      var countryData = data.country[0];
+
+      if (countryData) {
+          var countryId = countryData.country_id;
+          var probability = (countryData.probability * 100).toFixed(2);
+          resultDiv.innerHTML = `<p>Your most likely country is ${countryId} with a probability of ${probability}%.</p>`;
+      } else {
+          resultDiv.innerHTML = "<p>No data available for the provided name.</p>";
+      }
+  }
+</script>
+
+<script>
+  function fetchPrices() {
+      var now = new Date();
+      var currentTime = now.toLocaleTimeString();
+
+      fetch('https://api.coinbase.com/v2/exchange-rates?currency=USDT')
+          .then(response => response.json())
+          .then(data => {
+              displayPrices(data);
+              displayLastUpdateTime(currentTime);
+          })
+          .catch(error => {
+              console.error('Error fetching data:', error);
+              alert('Error fetching data. Please try again.');
+          });
+  }
+  function displayPrices(data) {
+      var pricesDiv = document.getElementById('prices');
+      var rates = data.data.rates;
+
+      var currencies = ['1INCH', 'AAVE', 'ABT', 'ACH', 'ACS', 'ADA', 'AED', 'BTC', 'ETH'];
+      var pricesHtml = '<p>1 USDT can buy:</p><ul>';
+
+      currencies.forEach(currency => {
+          if (rates[currency]) {
+              pricesHtml += `<li>${currency}: ${rates[currency]}</li>`;
+          } else {
+              pricesHtml += `<li>${currency}: N/A</li>`;
+          }
+      });
+
+      pricesHtml += '</ul>';
+      pricesDiv.innerHTML = pricesHtml;
+  }
+
+  function displayLastUpdateTime(currentTime) {
+      var updateTimeDiv = document.getElementById('lastUpdateTime');
+      updateTimeDiv.innerHTML = `<p>Last Update Time: ${currentTime}</p>`;
+  }
+
+  fetchPrices();
+
+  setInterval(fetchPrices, 3000);
+</script>
+
+</body>
+</html>
